@@ -1,0 +1,13 @@
+//
+
+--for apache - 8001
+ng build --prod --base-href /sak_inv/
+
+-- for surge   (sak-inv)
+ng build --prod
+
+
+ng g c components/a_group/show-dash01 --module app --skipTests=true --inlineStyle=true
+ng g c components/b_group/a44 --module app --skipTests=true --inlineStyle=true
+
+ng s -c ivan

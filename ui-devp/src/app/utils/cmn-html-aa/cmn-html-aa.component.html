@@ -1,0 +1,35 @@
+<div class="cmn-container-mn">
+  <p *ngIf="!cu.dataLoad">Loading data ...</p>
+
+  <div class="cmn-container-sb" *ngFor="let str of cu.pageData">
+
+    <ng-template [ngIf]="str['type'] == '1'">
+      <div class="mat-body-strong" style=" text-align: justify; text-justify: inter-word;padding: 15px;" [innerHTML]="str['text']"></div>
+    </ng-template>
+
+    <ng-template [ngIf]="str['type'] == '2'">
+      <div style="padding-top: 20px;">
+        <img style="width:100%;"
+          src="{{ cu.baseUrl }}{{ pageUrl }}/img/{{ str['name'] }}"
+          alt=""
+        />
+      </div>
+    </ng-template>
+
+    <ng-template [ngIf]="str['type'] == '3'">
+      <div style="padding-top: 20px;">
+        <a style="width:100%;"
+          href="{{ cu.baseUrl }}{{ pageUrl }}/pdf/{{ str['name'] }}"
+          target="_blank"
+        >
+          {{ str["name"].substr(5) }}
+        </a>
+      </div>
+    </ng-template>
+  </div>
+
+  <div *ngIf="cu.dataLoad" class="footer">
+    © Copyright 2021. All rights reserved.
+  </div>
+ </div>
+

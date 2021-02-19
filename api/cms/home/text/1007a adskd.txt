@@ -1,0 +1,10 @@
+<div class="text">
+<pre>
+  abc
+  def
+  ghi
+</pre>
+  abc
+  def
+  ghi
+</div>
